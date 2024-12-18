@@ -10,8 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@clerk/clerk-react": "^5.19.2",
+    "@clerk/themes": "^2.2.2",
+    "@types/react-table": "^7.7.20",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.0.2",
+    "react-table": "^7.8.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",
