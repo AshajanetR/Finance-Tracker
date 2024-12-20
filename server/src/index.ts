@@ -15,6 +15,10 @@ mongoose.connect(mongoURI)
 
 app.use("/financial-record",financialRecordRouter);
 
+app.get('/', (req, res) => {
+        res.send('<h1>Hello World</h1>');
+      });
+
 app.listen(port,()=>{
     console.log(`Server Running on Port ${port}`);
  }); 
