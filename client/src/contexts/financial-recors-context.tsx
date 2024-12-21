@@ -55,7 +55,7 @@ export const FinancialRecordsProvider=({children}:{children:React.ReactNode})=>{
 
 
     const updateRecord=async(id:string,newrecord:Financialrecord)=>{
-        const response=  await fetch(`https://finance-tracker-back-one.vercel.app/http://localhost:3001/financial-record/${id}`,{ 
+        const response=  await fetch(`https://finance-tracker-back-one.vercel.app/financial-record/${id}`,{ 
           method:"PUT",
           body:JSON.stringify(newrecord),
           headers:{
