@@ -8,7 +8,7 @@ const port =process.env.PORT || 3001;
 app.use(express.json());
 app.use(cors(
         {
-                origin:[""],
+                origin:["https://finance-tracker-frontend-six.vercel.app"],
                 methods:["POST","GET","PUT"],
                 credentials:true
         }
