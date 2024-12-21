@@ -13,7 +13,7 @@ app.use(cors(
                 credentials:true
         }
 ));
-const mongoURI: string ="mongodb+srv://AshajanetR:Asha1310@financetracker.frmjt.mongodb.net/?retryWrites=true&w=majority&appName=FinanceTracker";
+const mongoURI: string ="mongodb+srv://AshajanetR:Asha1310@financetracker.frmjt.mongodb.n";
 
 mongoose.connect(mongoURI)
         .then(()=>console.log("CONNECTED TO MONGODB."))
