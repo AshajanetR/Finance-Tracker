@@ -6,7 +6,13 @@ const app: Express=express();
 const port =process.env.PORT || 3001;
 
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+        {
+                origin:[""],
+                methods:["POST","GET","PUT"],
+                credentials:true
+        }
+));
 const mongoURI: string ="mongodb+srv://AshajanetR:Asha1310@financetracker.frmjt.mongodb.net/";
 
 mongoose.connect(mongoURI)
