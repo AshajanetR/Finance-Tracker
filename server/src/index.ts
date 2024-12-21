@@ -6,13 +6,9 @@ const app: Express=express();
 const port =process.env.PORT || 3001;
 
 app.use(express.json());
-app.use(cors(
-        {
-                origin:["https://finance-tracker-frontend-six.vercel.app"],
-                methods:["POST","GET","PUT"],
-                credentials:true
-        }
-));
+app.use(cors({
+    origin: "*"
+}));
 const mongoURI: string ="mongodb+srv://AshajanetR:Asha1310@financetracker.frmjt.mongodb.n";
 
 mongoose.connect(mongoURI)
