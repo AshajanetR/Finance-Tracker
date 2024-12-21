@@ -24,7 +24,7 @@ export const FinancialRecordsProvider=({children}:{children:React.ReactNode})=>{
     const {user}=useUser();
     const fetchRecords = async()=>{
         if(!user) return;
-        const response= await fetch(`http://localhost:3001https://finance-tracker-back-one.vercel.app/financial-record/getAllByUserID/${user?.id}`);
+        const response= await fetch(`https://finance-tracker-back-one.vercel.app/financial-record/getAllByUserID/${user?.id}`);
         if(response.ok){
             const records= await response.json();
             console.log(records);
