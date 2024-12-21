@@ -24,7 +24,7 @@ export const FinancialRecordsProvider=({children}:{children:React.ReactNode})=>{
     const {user}=useUser();
     const fetchRecords = async()=>{
         if(!user) return;
-        const response= await fetch(`http://localhost:3001/financial-record/getAllByUserID/${user?.id}`);
+        const response= await fetch(`http://localhost:3001https://finance-tracker-back-one.vercel.app/financial-record/getAllByUserID/${user?.id}`);
         if(response.ok){
             const records= await response.json();
             console.log(records);
@@ -36,7 +36,7 @@ export const FinancialRecordsProvider=({children}:{children:React.ReactNode})=>{
 
 
     const addRecord=async(record:Financialrecord)=>{
-    const response=  await fetch("http://localhost:3001/financial-record",{ 
+    const response=  await fetch("https://finance-tracker-back-one.vercel.app/financial-record",{ 
       method:"POST",
       body:JSON.stringify(record),
       headers:{
@@ -55,7 +55,7 @@ export const FinancialRecordsProvider=({children}:{children:React.ReactNode})=>{
 
 
     const updateRecord=async(id:string,newrecord:Financialrecord)=>{
-        const response=  await fetch(`http://localhost:3001/financial-record/${id}`,{ 
+        const response=  await fetch(`https://finance-tracker-back-one.vercel.app/http://localhost:3001/financial-record/${id}`,{ 
           method:"PUT",
           body:JSON.stringify(newrecord),
           headers:{
@@ -80,7 +80,7 @@ export const FinancialRecordsProvider=({children}:{children:React.ReactNode})=>{
         
     
         const deleteRecord=async(id:string)=>{
-            const response=  await fetch(`http://localhost:3001/financial-record/${id}`,{ 
+            const response=  await fetch(`https://finance-tracker-back-one.vercel.app/financial-record/${id}`,{ 
                 method:"DELETE",
               });
               
