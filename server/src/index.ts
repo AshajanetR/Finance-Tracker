@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(cors({
     origin: "*"
 }));
-const mongoURI: string ="mongodb+srv://vercel-admin-user:Asha1310@financetracker.frmjt.mongodb.net/?retryWrites=true&w=majority&appName=FinanceTracker";
+const mongoURI: string =process.env.MONGO_URI;
 
 mongoose.connect(mongoURI)
         .then(()=>console.log("CONNECTED TO MONGODB."))
